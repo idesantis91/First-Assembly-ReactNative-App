@@ -8,7 +8,7 @@ import {
     Lobster_400Regular
 } from '@expo-google-fonts/dev';
 
-const HomeSection = () =>{
+const Events = () =>{
     let [fontsLoaded] = useFonts({
         Lobster_400Regular
     });
@@ -25,10 +25,9 @@ const HomeSection = () =>{
                  height: 50,
                  width: 50
                  }}/>
-                 <Text style={styles.headerText}>First Assembly of God - NC</Text>
+                 <Text style={styles.headerText}>Events</Text>
             </View>
             <View style={styles.container}>
-            {/* </LinearGradient> */}
             <View style={styles.content}>
                 <Text>Welcome</Text>
             </View>
@@ -57,7 +56,7 @@ const styles = StyleSheet.create({
           position:'relative',
           flexDirection: 'row',
           paddingLeft: 10,
-          paddingRight: 70,
+          paddingRight: 170,
           justifyContent: 'space-between',
           alignItems: 'center',
           elevation: 2,
@@ -75,4 +74,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
       }
   });
-export default HomeSection;
+export default Events;
