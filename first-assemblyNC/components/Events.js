@@ -16,7 +16,7 @@ const Events = () =>{
 
     return(
         <LinearGradient
-            colors={['#414345','#232526']}
+            colors={['#000000','#000000']}
             style={styles.background}
             >
             <View style={styles.header} contentContainerStyle={{ flexDirection: 'row'}}>
@@ -28,31 +28,27 @@ const Events = () =>{
                  }}/>
                  <Text style={styles.headerText}>Events</Text>
             </View>
-            {/* <View style={styles.container}> */}
-            {/* <View style={styles.content}> */}
             <ScrollView>
-            <Card containerStyle={{marginTop: 20, borderColor:'#27648A', borderWidth: 5}}>
-                <Card.Title style={{fontSize: 20}}>VolleyBall</Card.Title>
+            <Card containerStyle={styles.card}>
+                <Card.Title style={styles.cardTitle}>VolleyBall</Card.Title>
                 <Card.Divider/>
                 <Card.Image source={require('../assets/VolleyBall.jpeg')}>
             </Card.Image>
-            <Text style={{marginBottom: .5, paddingTop: 10, fontSize: 15}}>
+            <Text style={styles.cardText}>
                 Join us for Volleyball on Tuesdays at 7:00pm!
             </Text>
             </Card>
-            <Card containerStyle={{marginTop: 20, borderColor:'#27648A', borderWidth: 5}}>
-                <Card.Title style={{fontSize: 20}}>Tech Team</Card.Title>
+            <Card containerStyle={styles.card}>
+                <Card.Title style={styles.cardTitle}>Tech Team</Card.Title>
                 <Card.Divider/>
                 <Card.Image source={require('../assets/Keyboard.jpeg')}>
             </Card.Image>
-            <Text style={{marginBottom: .5, paddingTop: 10, fontSize: 15}}>
+            <Text style={styles.cardText}>
                  Interested in Tech? Join the Tech Team and attend the training
                 Sunday, May 23rd. 
             </Text>
             </Card>
             </ScrollView>
-    {/* </View> */}
-        {/* </View> */}
         </LinearGradient>
     )
 }
@@ -95,6 +91,26 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffff',
         alignItems: 'center',
         justifyContent: 'center'
+      },
+
+      card:{
+        marginTop: 20, 
+        borderColor:'#27648A', 
+        borderWidth: 1,
+        borderRadius: 20,
+        backgroundColor:'#1B1B1B'
+      },
+
+      cardTitle:{
+        fontSize: 20, 
+        color:'white'
+      },
+
+      cardText:{
+        marginBottom: .5, 
+        paddingTop: 10, 
+        fontSize: 15,
+        color: 'white'
       }
   });
 export default Events;

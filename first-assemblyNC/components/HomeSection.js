@@ -1,7 +1,8 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { Card } from 'react-native-elements';
 import AppLoading from 'expo-app-loading';
 import {
     useFonts,
@@ -15,7 +16,7 @@ const HomeSection = () =>{
 
     return(
         <LinearGradient
-            colors={['#414345','#232526']}
+            colors={['#000000','#000000']}
             style={styles.background}
             >
             <View style={styles.header} contentContainerStyle={{ flexDirection: 'row'}}>
@@ -27,12 +28,12 @@ const HomeSection = () =>{
                  }}/>
                  <Text style={styles.headerText}>First Assembly of God - NC</Text>
             </View>
-            <View style={styles.container}>
-            {/* </LinearGradient> */}
-            <View style={styles.content}>
-                <Text>Welcome</Text>
-            </View>
-        </View>
+                 <ScrollView>
+                    <Card containerStyle={styles.container}>
+                        <Card.Title style={styles.cardTitle}>Verse of the Day</Card.Title>
+                        <Card.Divider style={{width:200, marginLeft:60}}/>
+                    </Card>
+                 </ScrollView>
         </LinearGradient>
     )
 }
@@ -40,7 +41,11 @@ const HomeSection = () =>{
 //Style 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        marginTop:50,
+        backgroundColor:'#1B1B1B',
+        borderColor: '#1B1B1B',
+        borderRadius: 20,
+        height:200
     },
       background: {
         position: 'absolute',
@@ -73,6 +78,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffff',
         alignItems: 'center',
         justifyContent: 'center'
-      }
+      },
+
+      cardTitle:{
+        fontSize: 20, 
+        color:'white'
+      },
   });
 export default HomeSection;
