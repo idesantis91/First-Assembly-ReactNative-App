@@ -9,7 +9,7 @@ import {
     Lobster_400Regular
 } from '@expo-google-fonts/dev';
 
-const Events = () =>{
+const Staff = () =>{
     let [fontsLoaded] = useFonts({
         Lobster_400Regular
     });
@@ -26,33 +26,16 @@ const Events = () =>{
                  height: 50,
                  width: 50
                  }}/>
-                 <Text style={styles.headerText}>Events</Text>
+                 <Text style={styles.headerText}>Staff</Text>
             </View>
-            {/* <View style={styles.container}> */}
-            {/* <View style={styles.content}> */}
             <ScrollView>
-            <Card containerStyle={{marginTop: 20, borderColor:'#27648A', borderWidth: 5}}>
-                <Card.Title style={{fontSize: 20}}>VolleyBall</Card.Title>
-                <Card.Divider/>
-                <Card.Image source={require('../assets/VolleyBall.jpeg')}>
-            </Card.Image>
-            <Text style={{marginBottom: .5, paddingTop: 10, fontSize: 15}}>
-                Join us for Volleyball on Tuesdays at 7:00pm!
-            </Text>
-            </Card>
-            <Card containerStyle={{marginTop: 20, borderColor:'#27648A', borderWidth: 5}}>
-                <Card.Title style={{fontSize: 20}}>Tech Team</Card.Title>
-                <Card.Divider/>
-                <Card.Image source={require('../assets/Keyboard.jpeg')}>
-            </Card.Image>
-            <Text style={{marginBottom: .5, paddingTop: 10, fontSize: 15}}>
-                 Interested in Tech? Join the Tech Team and attend the training
-                Sunday, May 23rd. 
-            </Text>
+            <Card style={{flexDirection:'right'}}>
+                 <Card.Title style={{fontSize:25}}>Pastor Steve DeSantis</Card.Title>
+                 <Card.Title>Lead Pastor</Card.Title>
+                 <Card.Image source={require('../assets/Pastor-Steve-NC.jpeg')} resizeMode="contain" style={{marginTop:20}}></Card.Image>
+                 <Text style={{textAlign:'center', paddingTop:30}}>Pastor Steve grew up in the New Castle area and First Assembly of God was his home church. He has served as a lead pastor for over 27 years in Warwick, RI and Clearfield, PA before moving back to New Castle in March of 2021. He has also served as a Sectional Secretary-Treasurer and Presbyter in the PennDel Ministry Network, and earned a Master’s Degree in Theology from the University of Valley Forge. Pastor Steve is married and has 6 children, 3 dogs and 2 cats. He has a passion to teach the Word of God in an accurate, understandable, and applicable way that will help people grow in their relationship with Christ. He loves to laugh and also enjoys a variety of sports, hobbies, and home projects. </Text>
             </Card>
             </ScrollView>
-    {/* </View> */}
-        {/* </View> */}
         </LinearGradient>
     )
 }
@@ -70,17 +53,16 @@ const styles = StyleSheet.create({
         height: '100%',
       },
       header:{
-        //  backgroundColor: '#282828',
+        //   backgroundColor: '#282828',
           height: 100,
           width: '100%',
           paddingTop: 40,
           position:'relative',
           flexDirection: 'row',
           paddingLeft: 10,
-          paddingRight: 164,
+          paddingRight: 170,
           justifyContent: 'space-between',
           alignItems: 'center',
-          textAlign: 'center',
           elevation: 2,
       },
 
@@ -88,7 +70,6 @@ const styles = StyleSheet.create({
           fontSize: 20,
           fontFamily: 'Lobster_400Regular',
           color: 'white',
-          textAlign: 'center'
       },
 
       content: {
@@ -97,4 +78,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
       }
   });
-export default Events;
+export default Staff;
