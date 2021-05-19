@@ -6,6 +6,7 @@
   - Shows Church Events
   - Contact/Social Media Pages
   - General information about the church
+  - Ability to Donate to Church
 
 ## Technologies Used 
 - React-Native
