@@ -1,19 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import AppLoading from 'expo-app-loading';
+import * as Font from 'expo-font';
 import { Card, ListItem, Button, Icon } from 'react-native-elements';
 import {
     useFonts,
     Lobster_400Regular
-} from '@expo-google-fonts/dev';
+} from '@expo-google-fonts/lobster';
 
 const Events = () =>{
-    let [fontsLoaded] = useFonts({
-        Lobster_400Regular
-    });
-
+   
+    // let[fontsLoaded, error] = useFonts({
+    //     Lobster_400Regular 
+    //  });
+    //  if(!fontsLoaded){
+    //      return <AppLoading/>
+    //  }
     return(
         <LinearGradient
             colors={['#000000','#000000']}
