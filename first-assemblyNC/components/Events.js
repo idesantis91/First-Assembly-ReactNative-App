@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
 
       card:{
         marginTop: 20, 
-        borderColor:'#27648A', 
+        borderColor:'#1B1B1B', 
         borderWidth: 1,
         borderRadius: 20,
         backgroundColor:'#1B1B1B'
