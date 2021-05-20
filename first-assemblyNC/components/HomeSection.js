@@ -5,6 +5,7 @@ import { Card } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import axios from 'react-native-axios';
 import AppLoading from 'expo-app-loading';
+import {API_KEY} from '@env';
 import { 
     useFonts,
     Lobster_400Regular 
@@ -116,16 +117,18 @@ const HomeSection = () =>{
           'Verse':'28'
         },
       ];
-      const verseIndex = Math.floor(Math.random() * VERSES.length);
-      const Book = VERSES[verseIndex].Book;
-      const Chapter = VERSES[verseIndex].Chapter;
-      const Verse = VERSES[verseIndex].Verse;
+
+      let verseIndex = Math.floor(Math.random() * VERSES.length);
+      let Book = VERSES[verseIndex].Book;
+      let Verse = VERSES[verseIndex].Verse;
+      let Chapter = VERSES[verseIndex].Chapter;
+     
         axios({
             method: 'GET',
             url: 'https://ajith-holy-bible.p.rapidapi.com/GetVerseOfaChapter',
             params: {Verse: Verse, chapter: Chapter, Book: Book},
             headers: {
-                'x-rapidapi-key': '57fd5d70a6msh2a1c921fece9bb8p187feajsn91de71ff04f4',
+                'x-rapidapi-key': API_KEY,
                 'x-rapidapi-host': 'ajith-holy-bible.p.rapidapi.com'
                 }
         })
