@@ -11,13 +11,6 @@ import {
 } from '@expo-google-fonts/lobster';
 
 const Events = () =>{
-   
-    // let[fontsLoaded, error] = useFonts({
-    //     Lobster_400Regular 
-    //  });
-    //  if(!fontsLoaded){
-    //      return <AppLoading/>
-    //  }
     return(
         <LinearGradient
             colors={['#000000','#000000']}
@@ -32,7 +25,8 @@ const Events = () =>{
                  }}/>
                  <Text style={styles.headerText}>Events</Text>
             </View>
-            <ScrollView>
+            <ScrollView style={styles.scrollView} 
+                        contentContainerStyle={styles.contentContainer}>
             <Card containerStyle={styles.card}>
                 <Card.Title style={styles.cardTitle}>VolleyBall</Card.Title>
                 <Card.Divider/>
@@ -52,6 +46,15 @@ const Events = () =>{
                 Sunday, May 23rd. 
             </Text>
             </Card>
+            <Card containerStyle={styles.card}>
+                <Card.Title style={styles.cardTitle}>Ladies Bible Study and Prayer</Card.Title>
+                <Card.Divider/>
+                <Card.Image source={require('../assets/prayer.jpeg')}>
+            </Card.Image>
+            <Text style={styles.cardText}>
+                 Ladies come out for Bible Study and Prayer every Tuesday at 10:30am - 12pm
+            </Text>
+            </Card>
             </ScrollView>
         </LinearGradient>
     )
@@ -59,6 +62,19 @@ const Events = () =>{
 
 //Style 
 const styles = StyleSheet.create({
+  scrollView: {
+    height: '100%',
+    alignSelf: 'center',
+    // padding: 20,
+    // backgroundColor:'blue',
+    borderColor: 'black',
+  },
+  contentContainer: {
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    paddingBottom: 100,
+    // backgroundColor:'white'
+  },
     container: {
         flex: 1,
     },
