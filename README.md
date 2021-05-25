@@ -3,7 +3,7 @@
 ## ScreenShots
 ![](https://github.com/idesantis91/First-Assembly-ReactNative-App/blob/main/img/Home.PNG)
 ![](https://github.com/idesantis91/First-Assembly-ReactNative-App/blob/main/img/Home2.PNG)
-![](https://github.com/idesantis91/First-Assembly-ReactNative-App/blob/main/img/Events.PNG)
+![](https://github.com/idesantis91/First-Assembly-ReactNative-App/blob/main/img/Events2.PNG)
 1[](https://github.com/idesantis91/First-Assembly-ReactNative-App/blob/main/img/Staff.PNG)
 
 ## Goal 
