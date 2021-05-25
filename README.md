@@ -16,3 +16,4 @@
 
 ## Technologies Used 
 - React-Native
+- Bible API
